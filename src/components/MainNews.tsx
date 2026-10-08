@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import Link from 'next/link';
 // import React from 'react';
 
 interface INews {
@@ -18,22 +19,24 @@ const MainNews = ({news}: {news: INews[]}) => {
     return (
         <div className="flex gap-2 my-5">
 
-            <div className="card bg-base-100 w-96 shadow-sm">
-                <figure>
-                    <Image
-                        src={firstNews.imageUrl}
-                        alt={firstNews.imageAlt}
-                        width={400}
-                        height={300}
-                    />
-                </figure>
-                <div className="card-body">
-                    <h6 className="text-red-600 text-sm font-semibold">{firstNews.category}</h6>
-                    <h2 className="card-title">{firstNews.title}</h2>
-                    <p>{firstNews.description}</p>
-                    
+            <Link href={`/news/${firstNews.id}`} className="w-1/2">
+                <div className="card bg-base-100  shadow-sm">
+                    <figure>
+                        <Image
+                            src={firstNews.imageUrl}
+                            alt={firstNews.imageAlt}
+                            width={400}
+                            height={300}
+                        />
+                    </figure>
+                    <div className="card-body">
+                        <h6 className="text-red-600 text-sm font-semibold">{firstNews.category}</h6>
+                        <h2 className="card-title">{firstNews.title}</h2>
+                        <p>{firstNews.description}</p>
+
+                    </div>
                 </div>
-            </div>
+            </Link>
 
             <div className="grid gap-2">
                 
