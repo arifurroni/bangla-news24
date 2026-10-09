@@ -33,6 +33,18 @@ const SignInPage = () => {
         }
     };
 
+    const handleGoogleSignin = async () => {
+        await authClient.signIn.social({
+            provider: "google",
+        });
+    };
+
+    const handleGithubSignin = async () => {
+        await authClient.signIn.social({
+            provider: "github",
+        });
+    };
+
     return (
         <div className="flex flex-col items-center justify-center mt-5">
             <h1 className="text-2xl font-bold text-red-700">সাইন ইন</h1>
@@ -48,6 +60,9 @@ const SignInPage = () => {
                     <button type="submit" className="btn text-white bg-red-700 mt-4">সাইন ইন</button>
                 </fieldset>
             </form>
+
+            <button onClick={handleGoogleSignin} className='btn'>Sign in with Google</button>
+            <button onClick={handleGithubSignin} className='btn'>Sign in with GitHub</button>
         </div>
     );
 };
