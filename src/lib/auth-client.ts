@@ -5,6 +5,6 @@ export const authClient = createAuthClient({
 
     trustedOrigins: [
     "http://localhost:3000",
-    "https://your-project.vercel.app",
+    "https://bangla-news24-r6xyp1lr0-arifur1.vercel.app",
   ],
 })
