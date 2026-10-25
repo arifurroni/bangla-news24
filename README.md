@@ -7,6 +7,7 @@
 Bangla News24 is a modern web application built with Next.js to provide a convenient and user-friendly platform for exploring Bangla news. The project aims to deliver a clean browsing experience for readers who want to stay informed about news and current affairs in Bangladesh.
 
 🌐 Live Demo: https://bangla-news24-amber.vercel.app
+
 💻 GitHub Repository: https://github.com/arifurroni/bangla-news24
 
 ---
